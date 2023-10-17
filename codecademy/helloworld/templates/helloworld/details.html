@@ -1,0 +1,18 @@
+{% extends "helloworld/base.html" %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'helloworld/style.css' %}">
+{% endblock %}
+
+{% block content %}
+
+{% for member in family %}
+
+{% if member.name|lower == memebername|lower %}
+<p>{{member.name}} is a {{member.species}}</p>
+{% endif %}
+
+{% endfor %} 
+
+{% endblock %}

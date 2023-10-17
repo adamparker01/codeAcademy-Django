@@ -1,0 +1,40 @@
+<head>
+   <style>
+      body {
+          font-family: Arial;
+      }
+      input[type=submit]{
+          background-color: #4CAF50;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+      }
+
+      a {
+         background-color: #4CAF50;
+         color: white;
+         padding: 14px 20px;
+         margin: 8px 0;
+         border: none;
+         border-radius: 4px;
+         cursor: pointer;
+         font-size: 14px;
+         text-decoration: none;
+     }
+      
+      </style>
+   </head>
+
+<h2>Sign up</h2>
+<form class="signup" method="post">
+   {% csrf_token %}
+   {{ form.as_p }}
+   <input type="submit" value="Sign Up"/>
+   <a href="{%url "login"%}">Back to Login</a>
+</form>
+
+
+
